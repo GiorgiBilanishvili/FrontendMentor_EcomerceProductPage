@@ -1,0 +1,1021 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+@media only screen and (max-width: 375px) {
+  /* header styles begins here */
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 28%;
+    margin-top: 1.5rem;
+  }
+
+  /* CART window */
+
+  .CART_window {
+    display: none;
+    position: absolute;
+    margin-top: 390px;
+    z-index: 10;
+    background-color: white;
+    width: 90%;
+    min-height: 300px;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+  .CART_window h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .CART_window hr {
+    border: 1px solid hsl(0, 0%, 96%);
+    margin: 10px -15px; /* parent padding-ის საწინააღმდეგოდ */
+    width: calc(97% + 40px);
+    display: block;
+  }
+  .CART_window p {
+    margin: 80px;
+    font-weight: bold;
+    color: hsl(219, 9%, 45%);
+  }
+  /* checked product */
+  .checked_product {
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    margin-top: 50px;
+    gap: 5%;
+    display: none;
+  }
+  .checked_product_resicleBin_img {
+    cursor: pointer;
+  }
+  .checked_product_shoes_img {
+    width: 20%;
+    border-radius: 10px;
+  }
+  .checked_product_h5 {
+    font-weight: 500;
+    color: hsl(219, 9%, 45%);
+  }
+  .checked_product_h6 {
+    font-weight: 500;
+    color: hsl(219, 9%, 45%);
+  }
+  .checked_product_h6 span {
+    font-weight: bold;
+    color: black;
+    margin-left: 10%;
+    font-size: 15px;
+  }
+  .checkout {
+    background-color: hsl(26, 100%, 55%);
+    border: 1px solid hsl(26, 100%, 55%);
+    /* padding: 10px 120px; */
+    color: black;
+    cursor: pointer;
+    margin-top: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    display: none;
+  }
+  /* checked product */
+  /* CART window */
+  nav {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 10;
+    background-color: white;
+    padding: 50px;
+    height: 800px;
+
+    transform: translateX(-100%); /* თავიდან მარცხნივ დამალული */
+    transition: transform 0.3s ease; /* ნელი ლამაზი მოძრაობა */
+  }
+  .close_btn {
+    display: none;
+    z-index: 100;
+    cursor: pointer;
+    margin-left: -10%;
+  }
+  .close_btn.active {
+    display: block;
+  }
+  nav.active {
+    transform: translateX(0); /* გამოჩნდება */
+  }
+  nav ul li {
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  hr {
+    display: none;
+  }
+  .avatar {
+    width: 1.5rem;
+  }
+  .logo {
+    cursor: pointer;
+  }
+  .cart_icon {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(46%) sepia(7%) saturate(400%)
+      hue-rotate(180deg);
+  }
+  .orangered_number_on_cartIcon {
+    position: relative;
+    left: -18px;
+    font-size: 12px;
+    top: -8px;
+    background-color: hsl(26, 100%, 55%);
+    padding: 2px 6px;
+    border-radius: 80%;
+    color: white;
+    display: none;
+  }
+  .burgerMenu_icon {
+    cursor: pointer;
+  }
+  .burger_iconANDlogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10%;
+  }
+  .cart_iconANDavatar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+  }
+
+  /* SLIDER Carousel section begins */
+  .slide {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease;
+  }
+  .markedImg {
+    display: none;
+  }
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 23.4rem; /* შეცვალე შენს ზომაზე */
+    height: 20rem;
+  }
+
+  .SliderCarousel {
+    margin-top: -1.5rem;
+  }
+  .product_1 {
+    width: 23.4rem;
+    height: 18rem;
+  }
+  .product_2 {
+    width: 23.4rem;
+    height: 18rem;
+    /* display: none; */
+  }
+  .product_3 {
+    width: 23.4rem;
+    height: 18rem;
+  }
+  .product_4 {
+    width: 23.4rem;
+    height: 18rem;
+  }
+  .left_and_right_arrows {
+    position: relative;
+    top: 10rem;
+    display: flex;
+    flex-direction: row;
+    gap: 60%;
+    justify-content: center;
+    z-index: 1;
+  }
+  .previous_arrow_btn {
+    cursor: pointer;
+    background-color: white;
+    padding: 1rem 1.2rem;
+    border-radius: 50%;
+  }
+  .next_arrow_btn {
+    cursor: pointer;
+    background-color: white;
+    padding: 1rem 1.2rem;
+    border-radius: 50%;
+  }
+
+  /* SNEAKER_COMPANY section */
+
+  .SNEAKER_COMPANY {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .SNEAKER_COMPANY {
+    h2 {
+      font-size: 0.8rem;
+      color: hsl(219, 9%, 45%);
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    h4 {
+      font-size: 0.8rem;
+      color: hsl(219, 9%, 45%);
+      font-weight: 500;
+      line-height: 1.5rem;
+    }
+
+    .PRICE {
+      display: flex;
+      gap: 10%;
+      align-items: center;
+    }
+    .NEW_PRICE {
+      color: black;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+    .SALE {
+      background-color: black;
+      color: white;
+      padding: 0.3rem;
+      border-radius: 0.3rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .OLD_PRICE {
+      margin-left: 23%;
+      text-decoration: line-through;
+      color: hsl(219, 9%, 45%);
+      font-weight: 600;
+    }
+    .together {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .MINUS_AND_PLUS {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 44%;
+      padding: 4%;
+      background-color: hsl(220, 7%, 92%);
+      border-radius: 0.5rem;
+    }
+    .MINUS_BTN,
+    .PLUS_BTN {
+      cursor: pointer;
+    }
+    .NUMBER {
+      font-weight: bold;
+    }
+
+    .ADD_TO_CARD {
+      background-color: hsl(26, 100%, 55%);
+      padding: 4%;
+      border-radius: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 10%;
+      align-items: center;
+      cursor: pointer;
+    }
+    .cart_icon2 {
+      width: 1rem;
+    }
+    .ADD_TO_CARD span {
+      font-weight: bold;
+    }
+  }
+
+  /* lightbox */
+
+  .lightbox {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 1024px) {
+  /* header styles begins here */
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40%;
+    margin-top: 1.5rem;
+  }
+
+  /* CART window */
+
+  .CART_window {
+    display: none;
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 450px;
+    z-index: 10;
+    background-color: white;
+    width: 40%;
+    min-height: 300px;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+  }
+  .CART_window h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .CART_window hr {
+    border: 1px solid hsl(0, 0%, 96%);
+    margin: 10px -15px; /* parent padding-ის საწინააღმდეგოდ */
+    width: calc(97% + 40px);
+    display: block;
+  }
+  .CART_window p {
+    margin: 80px;
+    font-weight: bold;
+    color: hsl(219, 9%, 45%);
+  }
+
+  .orangered_number_on_cartIcon {
+    position: relative;
+    left: -48px;
+    font-size: 12px;
+    top: -8px;
+    background-color: hsl(26, 100%, 55%);
+    padding: 2px 6px;
+    border-radius: 80%;
+    color: white;
+    display: none;
+  }
+
+  /* checked product */
+  .checked_product {
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    margin-top: 50px;
+    gap: 5%;
+    display: none;
+  }
+  .checked_product_shoes_img {
+    width: 20%;
+    border-radius: 10px;
+  }
+  .checked_product_resicleBin_img {
+    cursor: pointer;
+  }
+  .checked_product_h5 {
+    font-weight: 500;
+    color: hsl(219, 9%, 45%);
+  }
+  .checked_product_h6 {
+    font-weight: 500;
+    color: hsl(219, 9%, 45%);
+  }
+  .checked_product_h6 span {
+    font-weight: bold;
+    color: black;
+    margin-left: 10%;
+    font-size: 15px;
+  }
+  .checkout {
+    background-color: hsl(26, 100%, 55%);
+    border: 1px solid hsl(26, 100%, 55%);
+    /* padding: 10px 120px; */
+    color: black;
+    cursor: pointer;
+    margin-top: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    display: none;
+  }
+  /* checked product */
+  /* CART window */
+  nav {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 10;
+    background-color: white;
+    padding: 100px;
+    height: 800px;
+
+    transform: translateX(-100%); /* თავიდან მარცხნივ დამალული */
+    transition: transform 0.3s ease; /* ნელი ლამაზი მოძრაობა */
+  }
+  .close_btn {
+    display: none;
+    z-index: 100;
+    cursor: pointer;
+    margin-left: -30%;
+  }
+  .close_btn.active {
+    display: block;
+  }
+  nav.active {
+    transform: translateX(0); /* გამოჩნდება */
+  }
+  nav ul li {
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  /* .close_btn {
+    display: none;
+  } */
+  hr {
+    color: hsl(210, 1%, 70%);
+    border: 1px solid hsl(0, 0%, 96%);
+    margin-top: 20px;
+    width: 80%;
+    margin: 20px auto; /* auto სიგანაზე ცენტრში მოაქცევს */
+  }
+  .avatar {
+    width: 2rem;
+  }
+  .logo {
+    cursor: pointer;
+  }
+  .cart_icon {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(46%) sepia(7%) saturate(400%)
+      hue-rotate(180deg);
+  }
+  .burgerMenu_icon {
+    cursor: pointer;
+  }
+  .burger_iconANDlogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10%;
+  }
+  .cart_iconANDavatar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50%;
+  }
+
+  /* SLIDER Carousel section begins */
+  .slide {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease;
+  }
+  .markedImg {
+    display: none;
+  }
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 90%; /* შეცვალე შენს ზომაზე */
+    height: 20rem;
+    border-radius: 10px;
+  }
+
+  .SliderCarousel {
+    margin-top: -2rem;
+    margin-left: 10%;
+    width: 90%;
+  }
+
+  .slide {
+    height: 20rem;
+  }
+  .left_and_right_arrows {
+    position: relative;
+    top: 11rem;
+    left: -5%;
+    display: flex;
+    flex-direction: row;
+    gap: 65%;
+    justify-content: center;
+    z-index: 1;
+  }
+  .previous_arrow_btn {
+    cursor: pointer;
+    background-color: white;
+    padding: 1rem 1.2rem;
+    border-radius: 50%;
+  }
+  .next_arrow_btn {
+    cursor: pointer;
+    background-color: white;
+    padding: 1rem 1.2rem;
+    border-radius: 50%;
+  }
+
+  /* SNEAKER_COMPANY section */
+
+  .SNEAKER_COMPANY {
+    padding-left: 7rem;
+    padding-top: 7rem;
+    padding-right: 7rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: -50px;
+  }
+
+  .SNEAKER_COMPANY {
+    h2 {
+      font-size: 0.8rem;
+      color: hsl(219, 9%, 45%);
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    h4 {
+      font-size: 0.8rem;
+      color: hsl(219, 9%, 45%);
+      font-weight: 500;
+      line-height: 1.5rem;
+    }
+
+    .PRICE {
+      display: flex;
+      align-items: center;
+      gap: 10%;
+    }
+    .NEW_PRICE {
+      color: black;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+    .SALE {
+      background-color: black;
+      color: white;
+      padding: 0.3rem;
+      border-radius: 0.3rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .OLD_PRICE {
+      text-decoration: line-through;
+      color: hsl(219, 9%, 45%);
+      font-weight: 600;
+      position: relative;
+      top: 30px;
+      left: -36%;
+    }
+
+    .together {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 50px;
+    }
+    .MINUS_AND_PLUS {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 44%;
+      padding: 4%;
+      background-color: hsl(220, 7%, 92%);
+      border-radius: 0.5rem;
+      width: 80%;
+      height: 50px;
+    }
+    .MINUS_BTN,
+    .PLUS_BTN {
+      cursor: pointer;
+    }
+    .NUMBER {
+      font-weight: bold;
+    }
+
+    .ADD_TO_CARD {
+      background-color: hsl(26, 100%, 55%);
+      padding: 4%;
+      border-radius: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 10%;
+      align-items: center;
+      cursor: pointer;
+      width: 80%;
+      height: 50px;
+    }
+    .cart_icon2 {
+      width: 1rem;
+    }
+    .ADD_TO_CARD span {
+      font-weight: bold;
+    }
+  }
+
+  /* lightbox */
+
+  .lightbox {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1940px) {
+  /* header */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 400px;
+    margin-top: 30px;
+  }
+
+  /* CART window */
+
+  .CART_window {
+    display: none;
+    position: absolute;
+    margin-top: 390px;
+    margin-left: 750px;
+    z-index: 10;
+    background-color: white;
+    width: 20%;
+    min-height: 300px;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+  }
+  .CART_window h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .CART_window hr {
+    border: 1px solid hsl(0, 0%, 96%);
+    margin: 10px -15px; /* parent padding-ის საწინააღმდეგოდ */
+    width: calc(97% + 40px);
+    display: block;
+  }
+  .CART_window p {
+    margin: 80px;
+    font-weight: bold;
+    color: hsl(219, 9%, 45%);
+  }
+
+  .orangered_number_on_cartIcon {
+    position: relative;
+    left: -62px;
+    font-size: 12px;
+    top: -8px;
+    background-color: hsl(26, 100%, 55%);
+    padding: 2px 6px;
+    border-radius: 80%;
+    color: white;
+    display: none;
+  }
+
+  /* checked product */
+  .checked_product {
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    margin-top: 50px;
+    gap: 5%;
+    display: none;
+  }
+  .checked_product_resicleBin_img {
+    cursor: pointer;
+  }
+  .checked_product_shoes_img {
+    width: 20%;
+    border-radius: 10px;
+  }
+  .checked_product_h5 {
+    font-weight: 500;
+    color: hsl(219, 9%, 45%);
+  }
+  .checked_product_h6 {
+    font-weight: 500;
+    color: hsl(219, 9%, 45%);
+  }
+  .checked_product_h6 span {
+    font-weight: bold;
+    color: black;
+    margin-left: 10%;
+    font-size: 15px;
+  }
+  .checkout {
+    background-color: hsl(26, 100%, 55%);
+    border: 1px solid hsl(26, 100%, 55%);
+    /* padding: 10px 120px; */
+    color: black;
+    cursor: pointer;
+    margin-top: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    display: none;
+  }
+  /* checked product */
+  /* CART window */
+  .cart_iconANDavatar {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  hr {
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: hsl(210, 1%, 70%);
+    border: 1px solid hsl(0, 0%, 96%);
+  }
+  .burgerMenu_icon {
+    display: none;
+  }
+  .logo img {
+    cursor: pointer;
+  }
+  .cart_icon {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(46%) sepia(7%) saturate(400%)
+      hue-rotate(180deg);
+  }
+  .avatar {
+    width: 50px;
+    cursor: pointer;
+  }
+  .burger_iconANDlogo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  nav ul li {
+    font-size: 15px;
+    cursor: pointer;
+    color: hsl(219, 9%, 45%);
+  }
+  .close_btn {
+    display: none;
+  }
+
+  /* SliderCarousel section */
+
+  /* JS */
+
+  .active1 {
+    filter: opacity(0.5);
+    border: 4px solid orange;
+  }
+
+  /* JS */
+
+  .left_and_right_arrows {
+    display: none;
+  }
+  .slider-container {
+    display: flex;
+    flex-direction: row;
+    /* margin-left: 24%; */
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  .slide {
+    cursor: pointer;
+  }
+  .slide:nth-child(1) {
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .slide:nth-child(2) {
+    width: 100px;
+    margin-left: -90px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .slide:nth-child(3) {
+    width: 100px;
+    margin-left: -90px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .slide:nth-child(4) {
+    width: 100px;
+    margin-left: -90px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .togetherForResponsive {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin-left: 20%;
+  }
+  .markedImg img {
+    width: 430px;
+    /* margin-left: 2%; */
+    margin-top: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  /* SNEAKER_COMPANY section */
+
+  .SNEAKER_COMPANY {
+    padding-left: 7rem;
+    padding-top: 6rem;
+    padding-right: 7rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+  }
+
+  .SNEAKER_COMPANY {
+    h2 {
+      font-size: 0.8rem;
+      color: hsl(219, 9%, 45%);
+    }
+    h3 {
+      font-size: 3rem;
+    }
+    h4 {
+      font-size: 1rem;
+      color: hsl(219, 9%, 45%);
+      font-weight: 400;
+      line-height: 1.5rem;
+      width: 90%;
+    }
+
+    .PRICE {
+      display: flex;
+      align-items: center;
+      gap: 10%;
+    }
+    .NEW_PRICE {
+      color: black;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+    .SALE {
+      background-color: black;
+      color: white;
+      padding: 0.3rem;
+      border-radius: 0.3rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .OLD_PRICE {
+      text-decoration: line-through;
+      color: hsl(219, 9%, 45%);
+      font-weight: 600;
+      position: relative;
+      top: 30px;
+      left: -43%;
+    }
+
+    .together {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 50px;
+      margin-left: -20%;
+    }
+    .MINUS_AND_PLUS {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 24%;
+      padding: 4%;
+      background-color: hsl(220, 7%, 92%);
+      border-radius: 0.5rem;
+      width: 20%;
+      height: 50px;
+      padding-left: 4%;
+    }
+    .MINUS_BTN,
+    .PLUS_BTN {
+      cursor: pointer;
+    }
+    .NUMBER {
+      font-weight: bold;
+    }
+
+    .ADD_TO_CARD {
+      background-color: hsl(26, 100%, 55%);
+      padding: 4%;
+      border-radius: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 10%;
+      align-items: center;
+      cursor: pointer;
+      width: 45%;
+      height: 50px;
+    }
+    .cart_icon2 {
+      width: 1rem;
+    }
+    .ADD_TO_CARD span {
+      font-weight: bold;
+    }
+  }
+
+  /* lightbox */
+
+  .lightbox {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 300;
+    display: none;
+  }
+  .lightbox_main_img img {
+    width: 500px;
+    border-radius: 10px;
+    display: none;
+  }
+  .lightbox_main_img img.active {
+    display: block;
+  }
+  .lightbox_leftANDright_arrows {
+    display: flex;
+    position: relative;
+    top: 300px;
+    left: -20px;
+    gap: 88%;
+    z-index: 300;
+  }
+  .lightbox_right_arrow_btn {
+    cursor: pointer;
+    background-color: white;
+    padding: 1rem 1.2rem;
+    border-radius: 50%;
+  }
+  .lightbox_lefr_arrow_btn {
+    cursor: pointer;
+    background-color: white;
+    padding: 1rem 1.2rem;
+    border-radius: 50%;
+  }
+  .lightbox_close_icon img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  .lightbox_close_icon img:hover {
+    filter: brightness(0) saturate(100%) invert(54%) sepia(94%) saturate(500%)
+      hue-rotate(10deg);
+  }
+  .lightbox_4little_imgs img {
+    width: 121px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .lightbox_4little_imgs img.active {
+    filter: opacity(0.5);
+    border: 4px solid orange;
+  }
+  .lightbox_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 100;
+    display: none;
+  }
+}

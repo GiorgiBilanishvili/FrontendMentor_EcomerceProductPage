@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <!-- header section starts -->
+    <header>
+      <div class="burger_iconANDlogo">
+        <img class="burgerMenu_icon" src="images/icon-menu.svg" alt="img" />
+        <img class="close_btn" src="images/icon-close.svg" alt="img" />
+        <a class="logo" href="index.html">
+          <img src="images/logo.svg" alt="img" />
+        </a>
+        <nav>
+          <ul>
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="cart_iconANDavatar">
+        <img class="cart_icon" src="images/icon-cart.svg" alt="img" />
+        <div class="orangered_number_on_cartIcon">0</div>
+        <img class="avatar" src="images/image-avatar.png" alt="img" />
+      </div>
+      <!-- active CART window -->
+      <div class="CART_window">
+        <h2>Cart</h2>
+        <hr />
+        <p class="your_cart_is_empty">Your cart is empty</p>
+        <!-- checked product -->
+        <div class="checked_product">
+          <img
+            class="checked_product_shoes_img"
+            src="images/image-product-1-thumbnail.jpg"
+            alt="img"
+          />
+          <span>
+            <h5 class="checked_product_h5">Fall Limited Edition Sneakers</h5>
+            <h6 class="checked_product_h6">$125.00x1 <span>$125.00</span></h6>
+          </span>
+          <img
+            class="checked_product_resicleBin_img"
+            src="images/icon-delete.svg"
+            alt="img"
+          />
+        </div>
+        <button class="checkout">Checkout</button>
+      </div>
+    </header>
+    <hr />
+    <div class="togetherForResponsive">
+      <!-- SLIDER Carousel section -->
+
+      <section class="SliderCarousel">
+        <div class="left_and_right_arrows">
+          <img
+            class="previous_arrow_btn"
+            src="images/icon-previous.svg"
+            alt="img"
+          />
+          <img class="next_arrow_btn" src="images/icon-next.svg" alt="img" />
+        </div>
+        <div class="markedImg">
+          <img src="images/image-product-1.jpg" alt="" />
+        </div>
+        <div class="slider-container">
+          <img class="slide" src="images/image-product-1.jpg" />
+          <img class="slide" src="images/image-product-2.jpg" />
+          <img class="slide" src="images/image-product-3.jpg" />
+          <img class="slide" src="images/image-product-4.jpg" />
+        </div>
+      </section>
+
+      <!-- SNEAKER COMPANY section  -->
+
+      <section class="SNEAKER_COMPANY">
+        <h2>SNEAKER COMPANY</h2>
+        <h3>Fall Limited Edition Sneakers</h3>
+        <h4>
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they"ll withstand everything
+          the weather can offer.
+        </h4>
+
+        <div class="PRICE">
+          <div class="NEW_PRICE">$125.00</div>
+          <div class="SALE">50%</div>
+          <div class="OLD_PRICE">$250.00</div>
+        </div>
+        <div class="together">
+          <div class="MINUS_AND_PLUS">
+            <img class="MINUS_BTN" src="images/icon-minus.svg" alt="img" />
+            <div class="NUMBER">0</div>
+            <img class="PLUS_BTN" src="images/icon-plus.svg" alt="img" />
+          </div>
+
+          <div class="ADD_TO_CARD">
+            <img class="cart_icon2" src="images/icon-cart.svg" alt="img" />
+            <span>Add to cart</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIGHTBOX section -->
+
+      <div class="lightbox_overlay"></div>
+
+      <section class="lightbox">
+        <div class="lightbox_leftANDright_arrows">
+          <div class="lightbox_lefr_arrow_btn">
+            <img src="images/icon-previous.svg" alt="img" />
+          </div>
+
+          <div class="lightbox_right_arrow_btn">
+            <img src="images/icon-next.svg" alt="img" />
+          </div>
+        </div>
+        <div class="lightbox_close_icon">
+          <img src="images/icon-close.svg" alt="img" />
+        </div>
+
+        <div class="lightbox_main_img">
+          <img src="images/image-product-1.jpg" alt="img" />
+          <img src="images/image-product-2.jpg" alt="img" />
+          <img src="images/image-product-3.jpg" alt="img" />
+          <img src="images/image-product-4.jpg" alt="img" />
+        </div>
+
+        <div class="lightbox_4little_imgs">
+          <img src="images/image-product-1-thumbnail.jpg" alt="img" />
+          <img src="images/image-product-2-thumbnail.jpg" alt="img" />
+          <img src="images/image-product-3-thumbnail.jpg" alt="img" />
+          <img src="images/image-product-4-thumbnail.jpg" alt="img" />
+        </div>
+      </section>
+    </div>
+    <!-- JAVASCRIPT -->
+
+    <script>
+      // SLIDER CArousel
+
+      let PreviousArrowBtn = document.querySelector(".previous_arrow_btn");
+      let NextArrowBtn = document.querySelector(".next_arrow_btn");
+      // let Product1 = document.querySelector(".product_1");
+      // let Product2 = document.querySelector(".product_2");
+      // let Product3 = document.querySelector(".product_3");
+      // let Product4 = document.querySelector(".product_4");
+
+      let slides = document.querySelectorAll(".slide");
+      let currentIndex = 0;
+
+      let CheckedProductShoesImg = document.querySelector(
+        ".checked_product_shoes_img",
+      );
+
+      let CheckedProductResicleBinImg = document.querySelector(
+        ".checked_product_resicleBin_img",
+      );
+
+      let NUMBER = document.querySelector(".NUMBER");
+
+      CheckedProductResicleBinImg.onclick = function () {
+        if (count > 1) {
+          count--; // ერთით დაკლება
+        } else {
+          // თუ 1 იყო — შეგიძლია გააქრო საერთოდ
+          PriceEl.innerHTML = "";
+          NUMBER.textContent = "0"; // აქაც ნულდება
+          OrangeredNumberOnCartIcon.textContent = "0";
+          return;
+        }
+
+        total = price * count;
+
+        PriceEl.innerHTML = `$${price}.00 x${count} <span>$${total}.00</span>`;
+        NUMBER.textContent = count; // აქ ხდება განახლება
+        OrangeredNumberOnCartIcon.textContent = count;
+      };
+
+      function updateCheckedImage() {
+        let activeSlide = slides[currentIndex];
+
+        if (!activeSlide || !CheckedProductShoesImg) return;
+
+        let mainSrc = activeSlide.src;
+
+        // main → thumbnail convert
+        let thumbnailSrc = mainSrc.replace(".jpg", "-thumbnail.jpg");
+
+        CheckedProductShoesImg.src = thumbnailSrc;
+      }
+
+      function updateSlides() {
+        slides.forEach((slide, index) => {
+          slide.style.transform = `translateX(${(index - currentIndex) * 100}%)`;
+        });
+
+        updateCheckedImage();
+      }
+
+      updateSlides();
+
+      // NEXT →
+      NextArrowBtn.onclick = function () {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlides();
+      };
+
+      // ← PREVIOUS
+      PreviousArrowBtn.onclick = function () {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlides();
+      };
+
+      // MINUS_AND_PLUS  container
+
+      let MinusBtn = document.querySelector(".MINUS_BTN");
+      let PlusBtn = document.querySelector(".PLUS_BTN");
+      let NumberEl = document.querySelector(".NUMBER");
+
+      let OrangeredNumberOnCartIcon = document.querySelector(
+        ".orangered_number_on_cartIcon",
+      );
+
+      let YourCartIsEmpty = document.querySelector(".your_cart_is_empty");
+
+      let CheckedProduct = document.querySelector(".checked_product");
+
+      let CheckoutBtn = document.querySelector(".checkout");
+
+      let count = 0;
+
+      let PriceEl = document.querySelector(".checked_product_h6");
+
+      let price = 125; // ერთის ფასი
+
+      // ფუნქცია რომელიც ორივეს ანახლებს
+      function updateUI() {
+        NumberEl.textContent = count;
+        OrangeredNumberOnCartIcon.textContent = count;
+
+        let total = price * count;
+
+        PriceEl.innerHTML = `$${price}.00 x${count} <span>$${total}.00</span>`;
+
+        if (count > 0) {
+          OrangeredNumberOnCartIcon.style.display = "block";
+          CheckedProduct.style.display = "flex";
+          YourCartIsEmpty.style.display = "none";
+          CheckoutBtn.style.display = "block";
+        } else {
+          OrangeredNumberOnCartIcon.style.display = "none";
+          CheckedProduct.style.display = "none";
+          YourCartIsEmpty.style.display = "block";
+          CheckoutBtn.style.display = "none";
+        }
+      }
+
+      // პლიუსზე დაჭერა
+      PlusBtn.addEventListener("click", () => {
+        count++;
+        updateUI();
+      });
+
+      // მინუსზე დაჭერა
+      MinusBtn.addEventListener("click", () => {
+        if (count > 0) {
+          count--;
+          updateUI();
+        }
+      });
+
+      // responsive desktop image changer in slider
+
+      let SelectedImg = document.querySelector(".markedImg img");
+      let SlideImgs = document.querySelectorAll(".slide");
+
+      // გვერდის ჩატვირთვისას პირველი სურათი ავტომატურად
+      SelectedImg.src = SlideImgs[0].src;
+      CheckedProductShoesImg.src = SlideImgs[0].src;
+      SlideImgs[0].classList.add("active1");
+
+      // click ფუნქცია
+      SlideImgs.forEach((img) => {
+        img.onclick = function () {
+          SelectedImg.src = this.src;
+          CheckedProductShoesImg.src = this.src;
+
+          SlideImgs.forEach((i) => i.classList.remove("active1"));
+          this.classList.add("active1");
+        };
+      });
+
+      // CART window
+
+      let CartIcon = document.querySelector(".cart_icon");
+      let CartWindow = document.querySelector(".CART_window");
+
+      CartIcon.onclick = function () {
+        if (CartWindow.style.display === "block") {
+          CartWindow.style.display = "none";
+        } else {
+          CartWindow.style.display = "block";
+        }
+      };
+
+      let CheckOut = document.querySelector(".checkout");
+
+      CheckOut.onclick = function () {
+        alert("Order placed successfully!");
+
+        location.reload();
+      };
+      // MINUS and PLUS buttons
+
+      let AddToCard = document.querySelector(".ADD_TO_CARD");
+
+      AddToCard.addEventListener("click", () => {
+        if (CartWindow.style.display === "block") {
+          CartWindow.style.display = "none";
+          AddToCard.style.backgroundColor = "hsl(26, 100%, 55%)";
+        } else {
+          CartWindow.style.display = "block";
+          AddToCard.style.backgroundColor = "hsl(25, 100%, 94%)";
+        }
+      });
+
+      // BURGER Menu
+
+      let BurgerMenuIcon = document.querySelector(".burgerMenu_icon");
+      let Navigation = document.querySelector("nav");
+      let CloseBtn = document.querySelector(".close_btn");
+
+      BurgerMenuIcon.addEventListener("click", () => {
+        Navigation.classList.add("active");
+        CloseBtn.classList.add("active");
+      });
+
+      CloseBtn.addEventListener("click", () => {
+        Navigation.classList.remove("active");
+        CloseBtn.classList.remove("active");
+      });
+
+      // LIGHTBOX
+
+      let Lightboximages = document.querySelectorAll(".lightbox_main_img img");
+      let thumbs = document.querySelectorAll(".lightbox_4little_imgs img");
+
+      let nextBtn = document.querySelector(".lightbox_right_arrow_btn");
+      let prevBtn = document.querySelector(".lightbox_lefr_arrow_btn");
+
+      let lightbox = document.querySelector(".lightbox");
+      let mainImage = document.querySelector(".markedImg img");
+      let closeBtn = document.querySelector(".lightbox_close_icon");
+
+      let lightboxIndex = 0;
+
+      // thumbs.oncklick=function(){
+
+      // }
+      // INIT
+      function updateLightbox() {
+        Lightboximages.forEach((img) => img.classList.remove("active"));
+        thumbs.forEach((t) => t.classList.remove("active"));
+
+        Lightboximages[lightboxIndex].classList.add("active");
+        thumbs[lightboxIndex].classList.add("active");
+
+        // 🔥 sync main image too
+        mainImage.src = Lightboximages[lightboxIndex].src;
+      }
+
+      // OPEN
+      mainImage.onclick = function () {
+        lightbox.style.display = "block";
+        lightboxIndex = currentIndex;
+
+        updateLightbox();
+      };
+
+      // CLOSE
+      closeBtn.onclick = function () {
+        lightbox.style.display = "none";
+      };
+
+      // NEXT
+      nextBtn.onclick = function () {
+        lightboxIndex = (lightboxIndex + 1) % Lightboximages.length;
+        updateLightbox();
+      };
+
+      // PREV
+      prevBtn.onclick = function () {
+        lightboxIndex =
+          (lightboxIndex - 1 + Lightboximages.length) % Lightboximages.length;
+        updateLightbox();
+      };
+
+      // THUMB CLICK
+      thumbs.forEach((thumb, index) => {
+        thumb.onclick = function () {
+          lightboxIndex = index;
+          updateLightbox();
+
+          thumbs.forEach((img) => img.classList.remove("active"));
+
+          this.classList.add("active");
+        };
+      });
+
+      let overlay = document.querySelector(".lightbox_overlay");
+
+      mainImage.onclick = function () {
+        lightbox.style.display = "block";
+        overlay.style.display = "block";
+
+        lightboxIndex = currentIndex;
+        updateLightbox();
+      };
+
+      closeBtn.onclick = function () {
+        lightbox.style.display = "none";
+        overlay.style.display = "none";
+      };
+    </script>
+  </body>
+</html>
